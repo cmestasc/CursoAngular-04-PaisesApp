@@ -27,6 +27,11 @@ export class PorPaisComponent {
       console.info(err);
     });
   }
+  sugerencias(termino:string){
+    this.hayError = false;
+    
+
+  }
 
   constructor(private paisService: PaisService) { }
 
