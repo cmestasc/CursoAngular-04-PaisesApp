@@ -10,7 +10,7 @@ import { PaisService } from '../../services/pais.service';
 export class PorCapitalComponent implements OnInit {
   termino : string = "";
   hayError: boolean = false;
-  arrayPaises: Country[] = [];
+  paises: Country[] = [];
 
   buscar( termino:string){
     this.hayError = false;
@@ -18,12 +18,12 @@ export class PorCapitalComponent implements OnInit {
     console.log(this.termino);
     this.paisService.buscarCapital(this.termino).subscribe((paises)=>{
       console.log(paises);
-      this.arrayPaises = paises;
+      this.paises = paises;
 
     }, (err)=>{
       this.hayError = true;
       console.log("Error");
-      this.arrayPaises = [];
+      this.paises = [];
       console.info(err);
     });
   }

@@ -7,7 +7,7 @@ import { Country } from '../../interfaces/pais.interface';
   styleUrls: ['./pais-tabla.component.css']
 })
 export class PaisTablaComponent implements OnInit {
-  @Input() arrayPaises : Country [] = [];
+  @Input() paises : Country [] = [];
 
   constructor() { }
 
